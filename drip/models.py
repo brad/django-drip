@@ -10,7 +10,7 @@ import timedelta as djangotimedelta
 
 
 class SenderBase(models.Model):
-    """ Override this model to use a custom sender """
+    """ Inherit from this model to use a custom sender. """
 
     name = models.CharField(max_length=64)
     type = models.ForeignKey(ContentType, editable=False)
