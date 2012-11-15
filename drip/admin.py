@@ -11,7 +11,7 @@ class QuerySetRuleInline(admin.TabularInline):
     model = QuerySetRule
 
 class DripAdmin(admin.ModelAdmin):
-    list_display = ('name', 'enabled')
+    list_display = ('name', 'enabled', 'sender')
     inlines = [
         QuerySetRuleInline,
     ]
