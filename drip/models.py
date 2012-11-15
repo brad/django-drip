@@ -29,7 +29,7 @@ class SenderBase(models.Model):
 class Drip(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     lastchanged = models.DateTimeField(auto_now=True)
-    sender = models.ForeignKey(SenderBase, null=True, default=None)
+    sender = models.ForeignKey(SenderBase, null=True, blank=True, default=None)
 
     name = models.CharField(
         max_length=255,
