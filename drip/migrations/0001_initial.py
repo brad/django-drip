@@ -21,7 +21,7 @@ class Migration(SchemaMigration):
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('date', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
             ('lastchanged', self.gf('django.db.models.fields.DateTimeField')(auto_now=True, blank=True)),
-            ('sender', self.gf('django.db.models.fields.related.ForeignKey')(null=True, default=None, to=orm['drip.SenderBase'])),
+            ('sender', self.gf('django.db.models.fields.related.ForeignKey')(null=True, blank=True, default=None, to=orm['drip.SenderBase'])),
             ('name', self.gf('django.db.models.fields.CharField')(unique=True, max_length=255)),
             ('distinct', self.gf('django.db.models.fields.BooleanField')(default=True)),
             ('enabled', self.gf('django.db.models.fields.BooleanField')(default=False)),
